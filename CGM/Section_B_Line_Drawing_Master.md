@@ -28,7 +28,6 @@
 | 4 | 6 | 4.4 | **(6, 4)** |
 | 5 | 7 | 5.0 | **(7, 5)** |
 
-
 ### Example 2: DDA Case 2 ($m > 1$)
 **Q:** Scan-convert a line from $A(3, 2)$ to $B(2, 7)$ using DDA.
 
@@ -81,7 +80,6 @@
 | 2 | $0 + (-2) = \mathbf{-2}$ | 10 | 7 | **(10, 7)** |
 | 3 | $-2 + 6 = \mathbf{4}$ | 11 | 7 | **(11, 7)** |
 | 4 | $4 + (-2) = \mathbf{2}$ | 12 | 8 | **(12, 8)** |
-
 
 ### Example 4: Bresenham Case 2 ($m > 1$)
 **Q:** Scan-convert a line from $A(2, 1)$ to $B(5, 8)$ using Bresenham's Algorithm.
