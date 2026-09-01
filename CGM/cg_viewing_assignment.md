@@ -56,10 +56,70 @@ The coordinates $(0, 0, -8.775)$ mean the point is in the exact center of the ca
 The frame would **not** change. $(0,5,0)$ points in the same direction as $(0,1,0)$. Normalization will divide out the magnitude of 5, keeping the $u$ and $v$ unit vectors identical to before.
 
 **2. If $V$ is parallel to view direction ($n$):** 
-The cross product ($V \times n$) would result in a zero vector $(0,0,0)$. We cannot normalize a zero vector, meaning the camera loses its left/right orientation, and the coordinate system fails completely.91724
+The cross product ($V \times n$) would result in a zero vector $(0,0,0)$. We cannot normalize a zero vector, meaning the camera loses its left/right orientation, and the coordinate system fails completely.
+---
+---
 
-9172491724
+## Example 2: View Coordinate System (VCS) Calculation
 
-9172491724
+**Question 1:** Define the View Coordinate System (VCS) and state the roles of the three input parameters, Eye position, Look-at point, and Up vector, in setting up a camera.
+**Answer:**
+*   **View Coordinate System (VCS):** This is the camera's local coordinate system (defined by $u, v, n$ axes). It represents how the camera views the 3D world.
+*   **Roles of parameters:**
+    1.  **Eye position ($P_0$):** Defines the exact location where the camera is placed in the world.
+    2.  **Look-at point ($P_{ref}$):** Defines the target point the camera is looking at or focusing on.
+    3.  **Up vector ($V$):** Defines the "upward" direction for the camera, establishing its orientation (so the picture doesn't come out upside down).
 
-91724
+**Question 2:** Find the VCS coordinates of the point $A(1, 0.5, 1)$ for the following camera setup: Eye: $(2, 2, 3)$ | Look-at: $(2, 1, 1)$ | Up: $(0, 1, 0)$. Show the computation of the axis vectors $n, u, v$, the translation of $A$, and the final view coordinates.
+
+**Step 1: Normal Vector ($n$)**
+$$
+N = Eye - Look\_at = (2-2,\ 2-1,\ 3-1) = (0, 1, 2)
+$$
+$$
+|N| = \sqrt{0^2 + 1^2 + 2^2} = \sqrt{5}
+$$
+$$
+n = \frac{N}{|N|} = \left(0,\ \frac{1}{\sqrt{5}},\ \frac{2}{\sqrt{5}}\right)
+$$
+
+**Step 2: Right Vector ($u$)**
+$$
+U = V \times N = \begin{vmatrix} i & j & k \\ 0 & 1 & 0 \\ 0 & 1 & 2 \end{vmatrix} = (2, 0, 0)
+$$
+$$
+|U| = \sqrt{2^2} = 2
+$$
+$$
+u = \frac{U}{|U|} = \left(\frac{2}{2},\ 0,\ 0\right) = \mathbf{(1, 0, 0)}
+$$
+
+**Step 3: True Up Vector ($v$)**
+$$
+V_{actual} = N \times U = (0, 1, 2) \times (2, 0, 0) = (0, 4, -2)
+$$
+$$
+|V_{actual}| = \sqrt{0^2 + 4^2 + (-2)^2} = \sqrt{20} = 2\sqrt{5}
+$$
+$$
+v = \frac{V_{actual}}{|V_{actual}|} = \left(0,\ \frac{4}{2\sqrt{5}},\ \frac{-2}{2\sqrt{5}}\right) = \mathbf{\left(0,\ \frac{2}{\sqrt{5}},\ \frac{-1}{\sqrt{5}}\right)}
+$$
+
+**Step 4: Translation of A relative to the eye**
+$$
+A_{translated} = A - Eye = (1 - 2,\ 0.5 - 2,\ 1 - 3) = \mathbf{(-1,\ -1.5,\ -2)}
+$$
+
+**Step 5: Final View Coordinates**
+$$
+A_{view} = \begin{pmatrix} u_x & u_y & u_z \\ v_x & v_y & v_z \\ n_x & n_y & n_z \end{pmatrix} \times \begin{pmatrix} A_{tx} \\ A_{ty} \\ A_{tz} \end{pmatrix}
+$$
+$$
+A_{view} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 2/\sqrt{5} & -1/\sqrt{5} \\ 0 & 1/\sqrt{5} & 2/\sqrt{5} \end{pmatrix} \begin{pmatrix} -1 \\ -1.5 \\ -2 \end{pmatrix}
+$$
+*   $x_{view} = 1(-1) + 0 + 0 = -1$
+*   $y_{view} = 0 + \frac{2}{\sqrt{5}}(-1.5) + \frac{-1}{\sqrt{5}}(-2) = \frac{-3}{\sqrt{5}} + \frac{2}{\sqrt{5}} = \frac{-1}{\sqrt{5}}$
+*   $z_{view} = 0 + \frac{1}{\sqrt{5}}(-1.5) + \frac{2}{\sqrt{5}}(-2) = \frac{-1.5}{\sqrt{5}} - \frac{4}{\sqrt{5}} = \frac{-5.5}{\sqrt{5}}$
+
+**Final Answer:**
+VCS coordinates of point $A$ is **$\left(-1,\ \frac{-1}{\sqrt{5}},\ \frac{-5.5}{\sqrt{5}}\right)$** or approximately **$(-1,\ -0.447,\ -2.460)$**.
