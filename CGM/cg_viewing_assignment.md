@@ -56,4 +56,10 @@ The coordinates $(0, 0, -8.775)$ mean the point is in the exact center of the ca
 The frame would **not** change. $(0,5,0)$ points in the same direction as $(0,1,0)$. Normalization will divide out the magnitude of 5, keeping the $u$ and $v$ unit vectors identical to before.
 
 **2. If $V$ is parallel to view direction ($n$):** 
-The cross product ($V \times n$) would result in a zero vector $(0,0,0)$. We cannot normalize a zero vector, meaning the camera loses its left/right orientation, and the coordinate system fails completely.
+The cross product ($V \times n$) would result in a zero vector $(0,0,0)$. We cannot normalize a zero vector, meaning the camera loses its left/right orientation, and the coordinate system fails completely.91724
+
+9172491724
+
+9172491724
+
+91724

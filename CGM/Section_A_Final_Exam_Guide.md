@@ -107,4 +107,10 @@ DDA is a line drawing algorithm used to generate a straight line by calculating 
 5. Apply intensity attenuation, if required.
 6. Calculate each RGB component separately to obtain the final pixel intensity/color.
 *   *Surface rendering applies the lighting model to obtain pixel intensities for all projected surface positions in a scene. The intensity is calculated by considering ambient, diffuse, and specular reflections, along with multiple light sources, attenuation, and RGB color components.*
-> 📌 **[Exam Tip: ডায়াগ্রাম লাগবে না।]** শুধু এই ৬টি পয়েন্ট সিরিয়ালি লিখে দেবেন।
+> 📌 **[Exam Tip: ডায়াগ্রাম লাগবে না।]** শুধু এই ৬টি পয়েন্ট সিরিয়ালি লিখে দেবেন।91724
+
+9172491724
+
+9172491724
+
+91724

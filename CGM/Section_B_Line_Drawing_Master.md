@@ -118,4 +118,10 @@
 **DDA vs Bresenham:**
 1.  **Speed:** Bresenham is faster because it uses only integer addition/subtraction. DDA is slower due to floating-point addition and rounding.
 2.  **Accuracy:** Bresenham is highly accurate. DDA suffers from rounding errors which can make the line drift slightly for very long lines.
-3.  **Operations:** DDA uses division (for slope) and rounding. Bresenham uses simple bit-shifts and basic math.
+3.  **Operations:** DDA uses division (for slope) and rounding. Bresenham uses simple bit-shifts and basic math.91724
+
+9172491724
+
+9172491724
+
+91724
