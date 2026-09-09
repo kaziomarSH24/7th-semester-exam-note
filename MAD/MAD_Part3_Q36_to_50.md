@@ -97,14 +97,19 @@ graph TD
 5. Users may leave the app because of frustration.
 
 ### 44. Compare class and object with real-life example.
-**English:** A class is a blueprint, while an object is a real instance of that blueprint.
+**English:** A class is a logical blueprint or template, while an object is a physical reality created from that blueprint. 
 
-| Class | Object |
-| :--- | :--- |
-| It is a blueprint. | It is an instance of a class. |
-| It defines data and methods. | It uses that data and methods. |
-| **Example:** Car | **Example:** Toyota car |
-| **Real-life:** A house plan is like a class. | **Real-life:** The actual house built from the plan. |
+**Detailed Real-life Example:**
+Think of a **House Plan (Class)** created by an architect on paper. It defines the number of rooms, doors, and windows, but it does not take up any physical space on the ground, and you cannot live in it. 
+Using this single plan, a builder can construct multiple **Actual Houses (Objects)**. Each house is a real instance that takes up physical space, and people can actually live in it!
+
+| Feature | Class | Object |
+| :--- | :--- | :--- |
+| **Definition** | It is a blueprint or template. | It is a real instance of a class. |
+| **Memory** | It does NOT allocate memory when declared. | It allocates memory in the RAM when created. |
+| **Usage** | It defines data and methods. | It actually uses that data and methods. |
+| **Example** | `Car` (General concept) | `Toyota Corolla` (Specific physical car) |
+| **Real-life** | A house architectural plan on paper. | The actual physical house built from the plan. |
 
 ### 45. Analyze benefits of encapsulation in Android apps.
 **English:** Encapsulation means keeping data and methods together and controlling access to data.
@@ -114,13 +119,47 @@ graph TD
 4. **Less complexity** – Internal details can be hidden.
 5. **Better code organization** – Related data and methods stay together.
 
+**Code Example (Java):**
+```java
+class UserAccount {
+    // Hidden data (Private)
+    private String password; 
+    
+    // Controlled access through public method
+    public void setPassword(String newPassword) {
+        this.password = newPassword; 
+    }
+}
+```
+
 ### 46. Compare inheritance and polymorphism.
 **English:**
-| Inheritance | Polymorphism |
-| :--- | :--- |
-| Allows one class to get properties from another class. | Allows one method or name to have different forms. |
-| Mainly used for code reuse. | Mainly used for flexibility. |
-| **Example:** `Dog extends Animal` | **Example:** Different `sound()` methods. |
+| Feature | Inheritance | Polymorphism |
+| :--- | :--- | :--- |
+| **1. Definition** | One class takes the features of another class. | One method can have many different forms. |
+| **2. Main Use** | Used to reuse old code so we don't type it again. | Used to make the code flexible. |
+| **3. Concept** | It shows a Parent-Child relationship. | It shows how the same action behaves differently. |
+| **4. Keyword/Tool** | We use the `extends` keyword. | We use Method Overloading and Overriding. |
+
+**Code Example (Showing both in Java):**
+```java
+class Animal {
+    // Parent method
+    void makeSound() { 
+        System.out.println("Animal makes a sound"); 
+    }
+}
+
+// 1. INHERITANCE: Dog inherits from Animal
+class Dog extends Animal { 
+    
+    // 2. POLYMORPHISM: Dog overrides the parent method to change its form
+    @Override
+    void makeSound() { 
+        System.out.println("Dog barks: Woof Woof!"); 
+    }
+}
+```
 
 ### 47. Analyze ListView limitations in modern apps.
 **English:** ListView is simple, but it has some limitations.
