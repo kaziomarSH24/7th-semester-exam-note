@@ -71,7 +71,7 @@
 **বাংলা সামারি:** স্ক্রিনে যা কিছু দেখা যায় (বাটন, টেক্সট, ইমেজ) তার সবই হলো এক একটা View।
 
 ### 16. Define class in Java.
-**English:** A class is a blueprint or template from which individual objects are created. It contains fields (variables) and methods (functions) to define the behavior of an object.
+**English:** A class is like a paper blueprint or design. We use it to create real objects. It contains variables and methods.
 **Example:**
 ```java
 public class Car {
@@ -82,7 +82,7 @@ public class Car {
 **বাংলা সামারি:** ক্লাস হলো কোনো কিছু বানানোর 'নকশা' বা 'ছাঁচ'। যেমন: গাড়ির ব্লু-প্রিন্ট হলো ক্লাস, আর আসল গাড়িটা হলো অবজেক্ট।
 
 ### 17. What is object?
-**English:** An object is an instance of a class. It is a real-world entity that has a state (attributes) and behavior (methods).
+**English:** An object is a real thing made from a class. If a class is a house plan, the object is the actual house. It takes up space in memory.
 **Example:**
 ```java
 Car myCar = new Car(); // myCar is the object
@@ -90,7 +90,7 @@ Car myCar = new Car(); // myCar is the object
 **বাংলা সামারি:** অবজেক্ট হলো ক্লাসের বাস্তব রূপ। নকশা (Class) দেখে যে আসল গাড়িটা বানানো হলো, সেটাই Object।
 
 ### 18. What is encapsulation?
-**English:** Encapsulation is the mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit, and hiding internal details from the outside world.
+**English:** Encapsulation means hiding the sensitive data of a class. It combines data (variables) and functions (methods) into a single unit (like a capsule) to keep the data safe from outside changes.
 **Example:** Using `private` variables and public `getter/setter` methods.
 ```java
 class Person {
@@ -101,7 +101,7 @@ class Person {
 **বাংলা সামারি:** ক্যাপসুলের ভেতরে যেমন ওষুধ লুকানো থাকে, তেমনি ডাটা আর কোডকে একটা ক্লাসের ভেতরে লুকিয়ে রাখাকে Encapsulation বলে। 
 
 ### 19. What is inheritance?
-**English:** Inheritance is a mechanism in Java where one class acquires the properties (fields) and behaviors (methods) of a parent class. It promotes code reusability.
+**English:** Inheritance means one class takes the features of another class. It works like a child getting properties from a parent. It helps us reuse old code.
 **Example:** Using the `extends` keyword.
 ```java
 class Animal { }
@@ -110,5 +110,5 @@ class Dog extends Animal { } // Dog inherits from Animal
 **বাংলা সামারি:** বাবার সম্পত্তি যেমন ছেলে পায়, তেমনি এক ক্লাসের কোড অন্য ক্লাস যখন হুবহু ব্যবহার করতে পারে, তাকে Inheritance বলে। এতে বারবার কোড লিখতে হয় না।
 
 ### 20. What is ListView?
-**English:** ListView is a view group that displays a list of scrollable items. The list items are automatically inserted to the list using an Adapter.
+**English:** ListView is a UI element that shows many items in a long vertical list. Users can scroll the list up and down. It gets its data from an Adapter.
 **বাংলা সামারি:** স্ক্রিনে অনেকগুলো আইটেম লিস্ট আকারে (যেমন: মেসেঞ্জারের চ্যাট লিস্ট বা কন্ট্যাক্ট লিস্ট) দেখানোর জন্য ListView ব্যবহার করা হয়, যা স্ক্রল করা যায়।
