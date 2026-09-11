@@ -87,7 +87,7 @@
 **English:** Unit testing focuses testing on a single function or software module's internal logic and data structures. 
 
 **💡 Diagram (খাতায় আঁকার জন্য):**
-![Unit Testing Diagram](/Users/kaziomar/.gemini/antigravity/brain/3852bf38-cccd-49a0-8115-5d84fa1f5480/.user_uploaded/media_1789134843024.png)
+![Unit Testing Diagram](images/media_1789134843024.png)
 
 *   **Targets for Unit Test Cases (কী কী চেক করা হয়):**
     1. **Module interface:** Ensures that information flows properly into and out of the module.
@@ -129,7 +129,7 @@
 *   **Strategy:** Stubs are replaced one at a time (either Depth-First or Breadth-First). As new modules are integrated, tests are re-run.
 
 **💡 Diagram (খাতায় আঁকার জন্য):**
-![Top-Down Integration](/Users/kaziomar/.gemini/antigravity/brain/3852bf38-cccd-49a0-8115-5d84fa1f5480/.user_uploaded/media_1789135556717.png)
+![Top-Down Integration](images/media_1789135556717.png)
 
 #### B. Bottom-Up Integration
 *   **Process:** Integration and testing start with the lowest-level (atomic) modules.
@@ -137,7 +137,7 @@
 *   **Strategy:** Worker modules are grouped into clusters/builds. Drivers are replaced one at a time as we move upward.
 
 **💡 Diagram (খাতায় আঁকার জন্য):**
-![Bottom-Up Integration](/Users/kaziomar/.gemini/antigravity/brain/3852bf38-cccd-49a0-8115-5d84fa1f5480/.user_uploaded/media_1789135538355.png)
+![Bottom-Up Integration](images/media_1789135538355.png)
 
 ### 5. Sandwich Integration. (Slide 15, 16)
 **English:** 
@@ -151,7 +151,7 @@
 *   Requires a disciplined approach to avoid a chaotic "big bang" scenario.
 
 **💡 Diagram (খাতায় আঁকার জন্য):**
-![Sandwich Integration](/Users/kaziomar/.gemini/antigravity/brain/3852bf38-cccd-49a0-8115-5d84fa1f5480/.user_uploaded/media_1789135599166.png)
+![Sandwich Integration](images/media_1789135599166.png)
 
 ### 6. Regression Testing and Smoke Testing. (Slide 17-20) 🌟
 
@@ -179,6 +179,6 @@
     4. Managers can easily track project progress.
 
 **💡 Diagram (খাতায় আঁকার জন্য):**
-![Smoke Testing Diagram](/Users/kaziomar/.gemini/antigravity/brain/3852bf38-cccd-49a0-8115-5d84fa1f5480/.user_uploaded/media_1789135738919.png)
+![Smoke Testing Diagram](images/media_1789135738919.png)
 
 **বাংলা সামারি:** নতুন কোনো কোড অ্যাড করার পর আগের পুরোনো কোড নষ্ট হলো কি না, সেটা চেক করাই হলো **Regression Testing**। আর প্রতিদিন পুরো সিস্টেমকে জোড়া লাগানোর পর অ্যাপটা অন্তত অন হচ্ছে কি না (ক্র্যাশ করছে কি না), সেটা চেক করাই হলো **Smoke Testing**।
