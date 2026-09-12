@@ -50,7 +50,7 @@
     4.  Replacing the whole system is risky and costly.
 **বাংলা সামারি:** সফটওয়্যারের বাইরের কাজ বা ফিচার ঠিক রেখে ভেতরের কোড স্ট্রাকচারকে ইম্প্রুভ করাকেই Reengineering বলে। এটা করা হয় যাতে ফিউচারে মেইনটেন্যান্স খরচ কমে যায়। পুরো সিস্টেম নতুন করে বানানো অনেক রিস্কি এবং এক্সপেনসিভ, তাই রি-ইঞ্জিনিয়ারিং করা হয়।
 
-### 5. Legacy System Management (Slide 20, 21, 22, 23, 24, 25) 🌟
+### 5. Legacy System Management (Slide 20-25) 🌟
 **English:**
 *   **Legacy Systems:** Old systems that are very important for business, but use old technology and cost too much to maintain.
 *   **Management Options:**
@@ -58,6 +58,9 @@
     2.  **Low Quality, High Value:** Reengineer the system.
     3.  **High Quality, Low Value:** Do normal maintenance.
     4.  **High Quality, High Value:** Keep it and do normal maintenance.
+
+**💡 Diagram (Legacy System Assessment):**
+![Legacy System Assessment](images/media_1789239284838.png)
 **বাংলা সামারি:** লিগ্যাসি সিস্টেম মানে হলো অনেক পুরোনো কিন্তু বিজনেসের জন্য খুব ইম্পর্টেন্ট সিস্টেম। যদি সিস্টেমের কোয়ালিটি এবং বিজনেসের ভ্যালু দুইটাই খারাপ হয়, তবে ওটা ফেলে দিতে হয় (Scrap)। আর যদি কোয়ালিটি খারাপ কিন্তু বিজনেসের জন্য খুব ইম্পর্টেন্ট হয়, তখন সেটাকে Reengineer করতে হয়।
 
 ---
