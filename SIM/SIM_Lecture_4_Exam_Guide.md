@@ -109,16 +109,16 @@ $EAF = 1.15 \times 1.06 \times 0.91 \times 1.07 \times 1.00$
 **ii. Total Effort (E):**
 Formula: $E = a_1 \times (KLOC)^{a_2} \times EAF$
 $E = 3.0 \times (200)^{1.12} \times 1.187$
-$E = 3.0 \times 373.197 \times 1.187$
-**Total Effort (E) = 1329.13 pm**
+$E = 3.0 \times 377.705 \times 1.187$
+**Total Effort (E) = 1345.01 pm**
 
 **iii. Development Time (T):**
 Formula: $T = 2.5 \times (E)^b$
-$T = 2.5 \times (1329.13)^{0.35}$
-$T = 2.5 \times 12.569$
-**Development Time (T) = 31.42 months**
+$T = 2.5 \times (1345.01)^{0.35}$
+$T = 2.5 \times 12.446$
+**Development Time (T) = 31.12 months**
 
 **iv. Average Staff Size:**
 Formula: $Staff = \frac{Effort}{Time}$
-$Staff = \frac{1329.13}{31.42}$
-**Average Staff Size = 42.30 Persons (approx 42 Persons)**
+$Staff = \frac{1345.01}{31.12}$
+**Average Staff Size = 43.22 Persons (approx 43 Persons)**
