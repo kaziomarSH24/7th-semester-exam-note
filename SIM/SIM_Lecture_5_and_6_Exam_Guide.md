@@ -66,9 +66,9 @@
 
 ### 8. Debugging Strategies. (Slide 19-21)
 **English:** 
-1.  **Brute Force:** Blindly using print statements to find bugs. (Not efficient).
-2.  **Backtracking:** Going backward from the error line to find the root cause. (Good for small programs).
-3.  **Cause Elimination:** Using logic to eliminate wrong causes until you find the real cause. (Best method).
+1.  **Brute Force:** Developers just print variables to find the bug. It is a blind guess and wastes a lot of time. (Least efficient).
+2.  **Backtracking:** Developers start from the error line. Then they go backward line-by-line to find the root cause. (Good for small programs).
+3.  **Cause Elimination:** Developers use logic. They make a list of possible causes and eliminate the wrong ones step-by-step. (Best method).
 **বাংলা সামারি:** Brute Force হলো চোখ বন্ধ করে প্রিন্ট স্টেটমেন্ট দিয়ে ভুল খোঁজা। Backtracking হলো যেখান থেকে এরর এসেছে, সেখান থেকে উল্টো দিকে চেক করা। আর Cause elimination হলো লজিক খাটিয়ে আসল ভুলের কাছে পৌঁছানো।
 
 ---
@@ -83,11 +83,11 @@
 ![Unit Testing Diagram](images/media_1789134843024.png)
 
 *   **Targets for Unit Test (কী কী চেক করা হয়):**
-    1. **Interface:** Checks data flow in and out.
-    2. **Local data:** Checks temporary data.
-    3. **Boundary:** Checks the limit values.
-    4. **Paths:** Runs all code lines at least once.
-    5. **Error handling:** Checks error responses.
+    1. **Interface:** Checks if data flows in and out correctly.
+    2. **Local data:** Checks if temporary data is saved correctly.
+    3. **Boundary:** Checks what happens at maximum and minimum limits.
+    4. **Paths:** Runs every single line of code at least once.
+    5. **Error handling:** Checks if the software shows correct error messages.
 
 ### 2. Drivers and Stubs in Unit Testing. (Slide 7) 🌟
 **English:** 
@@ -113,14 +113,18 @@
 **📝 For Broad Question:**
 
 #### A. Top-Down Integration
-*   Starts from the main top module and goes down.
-*   Lower modules are replaced with **Stubs**.
+*   It starts from the main top module.
+*   It goes down step-by-step to lower modules.
+*   Lower modules are not ready yet.
+*   So, we replace lower modules with dummy worker programs called **Stubs**.
 *   **Diagram:**
 ![Top-Down Integration](images/media_1789135556717.png)
 
 #### B. Bottom-Up Integration
-*   Starts from the lowest modules and goes up.
-*   Top modules are replaced with **Drivers**.
+*   It starts from the lowest-level modules.
+*   It goes up step-by-step to the main module.
+*   Top modules are not ready yet.
+*   So, we replace top modules with dummy boss programs called **Drivers**.
 *   **Diagram:**
 ![Bottom-Up Integration](images/media_1789135538355.png)
 
@@ -137,14 +141,20 @@
 
 #### A. Regression Testing
 **English:**
-*   **Definition:** Running old tests again. 
-*   **Purpose:** It ensures new code does not break old code.
+*   **Definition:** It means running old test cases again.
+*   **Why do we need it?** When developers add new code or fix a bug, it might accidentally break old working code.
+*   **Purpose:** It ensures new changes do not create new errors in the software.
+*   **How to do it:** We can run old tests manually, or use automated testing tools to save time.
 
 #### B. Smoke Testing
 **English:**
-*   **Definition:** A daily test for the whole build.
-*   **Purpose:** It checks if the software crashes immediately (show-stopper errors).
-*   **Benefits:** Finds major errors early and tracks daily progress.
+*   **Definition:** It is a daily test for the whole software system.
+*   **Process:** Every day, developers combine all new code. Then they run a quick test.
+*   **Purpose:** To see if the software crashes immediately. We call these "show-stopper" errors.
+*   **Benefits:** 
+    1. It finds major errors early.
+    2. It saves time for developers.
+    3. Managers can easily track daily progress.
 
 **💡 Diagram (খাতায় আঁকার জন্য):**
 ![Smoke Testing Diagram](images/media_1789135738919.png)
