@@ -117,6 +117,17 @@
 *   It goes down step-by-step to lower modules.
 *   Lower modules are not ready yet.
 *   So, we replace lower modules with dummy worker programs called **Stubs**.
+
+**✅ Advantages (সুবিধা):**
+1. It tests the main logic (major control points) very early.
+2. If there are big design mistakes in the top modules, we can find them quickly.
+3. We get a working prototype of the software very early.
+
+**❌ Disadvantages (অসুবিধা):**
+1. It needs many Stubs (dummy programs), which wastes development time.
+2. Testing for lower-level data processing is delayed.
+3. It is hard to observe test outputs from deep within the system.
+
 *   **Diagram:**
 ![Top-Down Integration](images/media_1789135556717.png)
 
@@ -125,6 +136,17 @@
 *   It goes up step-by-step to the main module.
 *   Top modules are not ready yet.
 *   So, we replace top modules with dummy boss programs called **Drivers**.
+
+**✅ Advantages (সুবিধা):**
+1. It tests lower-level data processing very early.
+2. It does not need any Stubs (dummy worker programs).
+3. It is much easier to observe test results at the bottom level.
+
+**❌ Disadvantages (অসুবিধা):**
+1. It needs many Drivers, which wastes development time.
+2. We cannot see a working prototype of the whole system until the end.
+3. Big design mistakes in the top modules are found very late.
+
 *   **Diagram:**
 ![Bottom-Up Integration](images/media_1789135538355.png)
 
