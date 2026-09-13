@@ -66,3 +66,59 @@ COCOMO ম্যাথ করার জন্য আপনাকে শুধু
 ১. প্রথমে প্রজেক্টের সাইজ (KLOC) দেখে ক্যাটাগরি (Organic, Semi, Embedded) বের করবেন।
 ২. ওই ক্যাটাগরির $a_1, a_2, b$ এর মান মুখস্থ টেবিল থেকে বসাবেন।
 ৩. ক্যালকুলেটরে সূত্র (Effort, Time, Staff) দিয়ে হিসাব করে ফেলবেন! Intermediate এর ক্ষেত্রে শুধু EAF (প্রশ্নে দেওয়া সবগুলো কন্ডিশনের গুণফল) এক্সট্রা গুণ করতে হয় Effort-এর সাথে।
+
+---
+
+## 6. Previous Class Test Solution (Important!)
+
+### Q1. Differentiate between Basic, Intermediate, and Detailed COCOMO. Explain advantages and limitations.
+**Answer:**
+**Difference:**
+1.  **Basic COCOMO:** It calculates software cost and effort based **only on the size** of the program (KLOC). It is used for quick and early estimates.
+2.  **Intermediate COCOMO:** It calculates cost based on the size (KLOC) **AND 15 cost drivers** (like team experience, memory constraints). It uses an Effort Adjustment Factor (EAF).
+3.  **Detailed COCOMO:** It is the most advanced model. It calculates the impact of cost drivers on **each individual phase** (planning, design, coding, testing) of the project.
+
+**Advantages and Limitations:**
+*   **Basic COCOMO:**
+    *   *Advantage:* Very simple and fast to calculate.
+    *   *Limitation:* Low accuracy because it ignores team skills and hardware constraints.
+*   **Intermediate COCOMO:**
+    *   *Advantage:* More accurate because it considers 15 real-world cost drivers.
+    *   *Limitation:* Estimating the exact value of cost drivers can be subjective/guesswork.
+*   **Detailed COCOMO:**
+    *   *Advantage:* Highest accuracy as it calculates effort for every single development phase.
+    *   *Limitation:* Extremely complex and time-consuming to calculate.
+
+### Q2. Math Problem: Semidetached project with 200 KLOC. Cost Drivers given. Calculate EAF, Effort, Time, Staff.
+**Answer:**
+**Given Data:**
+*   Model Category: **Semidetached**
+*   Size (KLOC): **200**
+*   Cost Drivers: Reliability (1.15), Memory (1.06), App Exp (0.91), Lang Exp (1.07), Schedule (1.00)
+
+**Constants for Semidetached (Intermediate):**
+*   $a_1 = 3.0$
+*   $a_2 = 1.12$
+*   $b = 0.35$
+
+**Calculations:**
+**i. Effort Adjustment Factor (EAF):**
+$EAF = 1.15 \times 1.06 \times 0.91 \times 1.07 \times 1.00$
+**EAF = 1.187**
+
+**ii. Total Effort (E):**
+Formula: $E = a_1 \times (KLOC)^{a_2} \times EAF$
+$E = 3.0 \times (200)^{1.12} \times 1.187$
+$E = 3.0 \times 373.197 \times 1.187$
+**Total Effort (E) = 1329.13 pm**
+
+**iii. Development Time (T):**
+Formula: $T = 2.5 \times (E)^b$
+$T = 2.5 \times (1329.13)^{0.35}$
+$T = 2.5 \times 12.569$
+**Development Time (T) = 31.42 months**
+
+**iv. Average Staff Size:**
+Formula: $Staff = \frac{Effort}{Time}$
+$Staff = \frac{1329.13}{31.42}$
+**Average Staff Size = 42.30 Persons (approx 42 Persons)**
